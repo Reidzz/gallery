@@ -1,0 +1,363 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    background-color: rgb(206, 206, 206);
+    height: 100%;
+    font-family: sans-serif;
+}
+
+.main-container {
+    height: 100%;
+    /*margin-top: 90px;*/
+}
+
+.navbar {
+    overflow: hidden;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    /*height: 50px;*/
+    z-index: 3;
+    padding: 14px 16px;
+}
+
+.navbar-logo {
+    display: flex;
+    justify-content: center;
+    /*padding: 14px 16px;*/
+    font-size: 18px;
+    /*z-index: 4;*/
+}
+
+.logo-link {
+    color: white;
+    text-decoration: none;
+}
+
+.navbar-right {
+    position: absolute;
+    top: 6px;
+    right: 14px;
+    /*padding: 6px 14px;*/
+}
+
+.book-btn {
+    border: 2px solid white;
+    text-align: center;
+    padding: 6px 8px;
+    font-size: 18px;
+    width: auto;
+    cursor: pointer;
+}
+
+.book-link {
+    color: white;
+    text-decoration: none;
+}
+
+.hamburger {
+    /*background: black;*/
+    /*padding: 10px 14px;*/
+    display: block;
+    position: absolute;
+    top: 10px;
+    left: 14px;
+    cursor: pointer;
+    z-index: 2;
+    /*display: flex;
+    flex-direction: column;
+    justify-content: space-around;*/
+}
+
+.line {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+    border-radius: 25px;
+    transition: all .5s;
+}
+
+.open-btn .top-line {
+    transform: rotateZ(-45deg) translate(-6px, 5px);
+}
+
+.open-btn .middle-line {
+    opacity: 0;
+}
+
+.open-btn .bottom-line {
+    transform: rotateZ(45deg) translate(-6px, -5px);
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: black;
+    overflow: hidden;
+    transition: all .5s;
+    /*opacity: .9;*/
+    padding-top: 50px;
+    /*display: flex;
+    justify-content: center;*/
+}
+
+.open {
+    width: 250px;
+}
+
+/*.sidebar-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}*/
+
+.sidebar-list-item {
+    list-style: none;
+    margin: 25px;
+    font-size: 20px;
+}
+
+.sidebar-link {
+    color: white;
+    text-decoration: none;
+}
+
+.sidebar-list-item a:hover {
+    margin-left: 10px;
+    /*transition: all .4s;*/
+}
+
+.sidebar-bottom {
+    background-color: white;
+    height: 100%;
+    padding-top: 10px;
+}
+
+.social-icons {
+    font-size: 28px;
+    padding: 5px 5px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.sidebar-footer {
+    color: black;
+    position: absolute;
+    bottom: 0px;
+    /*display: flex;
+    justify-content: center;
+    align-items: center;*/
+    font-size: 18px;
+    padding: 14px 16px;
+    white-space: nowrap;
+}
+
+.fb-icon {
+    font-size: 24px;
+}
+
+.kevlar-image {
+    background-image: linear-gradient(rgba(233, 85, 85, 0.5), rgba(0, 0, 0, 0.5)), url('images/new2.jpg');
+    /*background-image: url('images/partylandscape.jpg');*/
+    height: 100%;
+    max-width: 100%;
+    width: 1400px;
+    /*min-height: 600px;*/
+    overflow: hidden;
+    /*background-position: center center;*/
+    background-position: top 50px center;
+    /*background-position: bottom right;*/
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    /*position: absolute;*/
+    position: relative;
+    /*top: 0;*/
+}
+
+.main-content {
+    /*transition: margin-left .7s;*/
+    position: absolute;
+    /*top: 250px;*/
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 16px 16px;
+    /*font-size: 30px;*/
+    /*width: 100%*/
+    color: white;
+    white-space: nowrap;
+}
+
+.main-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 46px;
+}
+
+.sub-title {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 46px;
+    margin-top: 20px;
+}
+
+.main-buttons {
+    display: flex;
+    flex-direction: row;
+    /*flex-wrap: wrap;*/
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 30px 30px;
+    font-size: 24px;
+}
+
+.main-btn {
+    border: 2px solid white;
+    padding: 5px 30px;
+    width: 150px;
+    display: block;
+    margin: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn-link {
+    color: white;
+    text-decoration: none;
+}
+
+@media (max-width: 700px) {
+    .main-buttons {
+        flex-direction: column;
+    }
+    .main-title {
+        font-size: 26px;
+    }
+    .sub-title {
+        font-size: 26px;
+    }
+    .roster-gallery {
+        flex-direction: column;
+    }
+}
+
+.footer {
+    background-color: black;
+    color: white;
+    position: relative;
+    padding: 14px 16px;
+    font-size: 18px;
+    /*top: 0;*/
+    bottom: 0;
+    /*width: 100%;*/
+    display: flex;
+    justify-content: center;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /*grid-template-columns: repeat(auto-fit)(3, 1fr);*/
+    gap: 0;
+    padding: 20px;
+    /*width: 100%;*/
+    max-width: 1160px;
+    margin: 0 auto;
+    position: relative;
+    top: 50px;
+}
+
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 540px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.gallery-image {
+    /*padding: 10px;*/
+    overflow: hidden;
+    /*cursor: pointer;*/
+}
+
+.gallery {
+    /*width: 200px;
+    height: 250px;*/
+    /*max-width: 100%;*/
+    width: 100%;
+    height: auto;
+    vertical-align: middle;
+    object-fit: cover;
+    transition: all 250ms ease-in-out;
+}
+
+.gallery:hover {
+    opacity: .8;
+    cursor: pointer;
+    transform: scale(1.01);
+}
+
+.roster-gallery {
+    display: flex;
+    /*position: relative;
+    top: 50px;*/
+    /*flex-direction: column;*/
+}
+
+.artist {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+}
+
+.artist-image {
+    /*width: 50%;
+    height: 80%;*/
+    /*width: 450px;
+    height: 500px;*/
+    width: 100%;
+    max-width: 450px;
+    height: 500px;
+    /*filter: grayscale(100%);*/
+}
+
+.artist-bio {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    line-height: 28px;
+    padding: 40px 20px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 16px;
+}
